@@ -1,0 +1,33 @@
+#code of task-2 Calculator
+try:
+    a=int(input("What is the first value: "))
+    b=int(input("What is the second value: "))
+    
+    print("Choose the operation to be performed: \n",
+          "1. Addition\n",
+          "2. Subtraction\n",
+          "3. Multiplication\n",
+          "4. Division\n")
+    
+    cal=input("Enter the Operation to be performed: ")
+    if cal=="Addition":
+        ans=a+b
+    elif cal=="Subtraction":
+        ans=a-b
+    elif cal=="Multiplication":
+        ans=a*b
+    elif cal=="Division":
+        if b==0:
+            print("Can not divide by Zero")
+        else:
+            ans=a/b
+    
+    else:
+        print("You provide an Invalid Operation")
+        ans=None
+    if ans is not None:
+        print(f"The answer is {ans}")
+        
+    
+except ValueError:
+    print("Invalid operation, Please enter a valid operation")
